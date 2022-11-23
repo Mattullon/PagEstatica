@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+
+
+.inicio{
+  
+  background-color: #8eb1b9;
+  box-sizing: border-box;
+  width: 100%;
+  border: solid #5B6DCD 10px;
+  padding: 5px;
+  
+  
+  
+  }
+.fundadores{
+    
+    background-color: #8885819f;
+    box-sizing: border-box;
+    width: 100%;
+    border: solid #5B6DCD 10px;
+    padding: 5px;
+    justify-content: flex-start;
+}
+
+  
+.link{
+  text-decoration: none;
+  display: inline;
+  padding: 20px 20px;
+  font-weight: 700;
+  font-size: large;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+
+.f{
+ 
+  color: #a5b3b6;
+}
+.big{
+  font-size: 2.2em;
+  
+}
+.Tparrafo{
+  text-align: left;
+  font-size: 1.2em;
+  padding: 50px;
+}
+
+
+
+
+
+
+.tbar{
+  
+  justify-content: center;
+
+
+
+ 
+}
+.d{
+  background-color: #06181b;
+}
+.texto_login{
+  text-align: center;
+
+}
