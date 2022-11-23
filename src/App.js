@@ -1,19 +1,24 @@
 import "./App.css";
 import { useRef } from "react";
-import { MediaCard, MediaCard2, MediaCard3,MediaCard4,MediaCard5 } from "./components/card";
-import { AppBar,Grid,IconButton,Toolbar,} from "@mui/material";
-import { Link } from "react-router-dom";
+import { MediaCard } from "./components/card";
+import { AppBar,Button,IconButton,Toolbar,} from "@mui/material";
+import {  useNavigate } from "react-router-dom";
 import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Cardss } from "./components/mediacard";
 function App() {
   const inicio = useRef(null);
   const developers = useRef(null);
-  
+  const navigate = useNavigate();
+  const handlogin=()=>{
+    navigate("/login")
+  }
   const irAlaSeccion = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
       behavior: "smooth",
     });
+
   };
   return (
     <div className="App">
@@ -22,17 +27,13 @@ function App() {
         <AppBar position="static" color="primary">
     
             <Toolbar  variant="dense" className="tbar">
-            <IconButton size="large" edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }} />
-               <MenuIcon />
+            
               <IconButton
                 onClick={() => irAlaSeccion(inicio)}
                 className="link"
                 color="inherit"
               >
-                INICIO{" "}
+                <MenuIcon></MenuIcon> 
               </IconButton>
               <IconButton
                 onClick={() => irAlaSeccion(developers)}
@@ -41,9 +42,14 @@ function App() {
               >
                 FUNDADORES
               </IconButton>
-              <Link 
-          component="button"
-          variant="body2" to="login"> INSCRIPCION </Link>
+              <IconButton
+               
+                className="link"
+                color="inherit"
+              >
+                Login
+              </IconButton>
+              
         
             </Toolbar>
           </AppBar>
@@ -62,17 +68,17 @@ function App() {
             than the industry average and we don't charge ridiculous mark-ups
             (only 25%). To top it off, all our developers have successfully
             completed our technical vetting which includes a 2-stage interview
-            process, soft-skills test and a technical assessment.
+            process, soft-skills test and a technical assessment.<MediaCard/>
           </p>{" "}
           <p className="parrafo">
            
           </p>{" "}
-          <Link 
-          component="button"
-          variant="body2" to="cardss"> hola </Link>
+          
         </div>
         
-          
+          <Button onClick={handlogin} variant="contained" color="success" >
+            Inscribirse
+             </Button>
           
        
       </div> 
@@ -88,23 +94,3 @@ function App() {
 
 export default App;
 
-const Cardss = ()=>  <div  className="fundadores">
-<h3 className="strong"> DEVELOPERS </h3>
-<Grid container spacing={4} justifyContent={"center"}>
-  <Grid item  >
-    <MediaCard />
-  </Grid>
-  <Grid item >
-    <MediaCard2 />
-  </Grid>
-  <Grid item>
-    <MediaCard3 />
-  </Grid>
-  <Grid item>
-    <MediaCard4 />
-  </Grid>
-  <Grid item>
-    <MediaCard5 />
-  </Grid>
-</Grid>
-</div>

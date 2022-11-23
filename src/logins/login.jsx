@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from '@mui/material';
+import { useNavigate } from 'react-router';
 
 const theme = createTheme();
 
@@ -24,6 +25,10 @@ export default function Login() {
       password: data.get('password'),
     });
   };
+  const navigate= useNavigate();
+  const handlelogin=()=>{
+    navigate("LoginUp")
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -78,9 +83,9 @@ export default function Login() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link variant="body2" component="button" to="LoginUp" >
-                  Olvido la contrase?
-                </Link>
+                <Button onClick={handlelogin}>
+                  Crear cuenta
+                </Button>
               </Grid>
               <Grid item>
                 <Link variant="body2" href="LoginUp" >
