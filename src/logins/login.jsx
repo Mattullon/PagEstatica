@@ -11,7 +11,6 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Link } from '@mui/material';
 import { useNavigate } from 'react-router';
 
 const theme = createTheme();
@@ -82,15 +81,13 @@ export default function Login() {
               Registrase 
             </Button>
             <Grid container>
-              <Grid item xs>
-                <Button onClick={handlelogin}>
+              <Grid item xs >
+                <Button onClick={handlelogin} >
                   Crear cuenta
                 </Button>
               </Grid>
               <Grid item>
-                <Link variant="body2" href="LoginUp" >
-                  Crear Cuenta 
-                </Link>
+                
               </Grid>
             </Grid>
           </Box>

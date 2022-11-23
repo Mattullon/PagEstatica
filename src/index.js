@@ -5,6 +5,7 @@ import App from './App';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import  Login  from './logins/login';
 import LoginUp from './logins/loginUp';
+import { Cardss } from './components/mediacard';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
@@ -12,11 +13,17 @@ root.render(
     <BrowserRouter> 
     
     <Routes>
-        <Route index element={<App />}></Route>
-        <Route path="login/LoginUp" element={<LoginUp />}></Route>
-        <Route path="login" element={<Login />}></Route>
-        
+      
+
+         <Route path='*' element={<App />}>
+             <Route path='cards' element={<Cardss />}></Route>
+         </Route>
+         <Route path="login" element={<Login />}></Route>    
+         <Route path="login/LoginUp" element={<LoginUp />}></Route>
+    
+      
     </Routes>
+
 
    </BrowserRouter>
 
