@@ -1,19 +1,12 @@
 import "./App.css";
-import { Button, Container, Typography} from "@mui/material";
-import {  Link, Outlet, useNavigate } from "react-router-dom";
 import React from 'react';
 import { Layout } from "./components/Layout";
+import { Container } from "@mui/system";
+import { Typography } from "@mui/material";
+import Footer from "./components/footer";
 function App() {
   
   
-  const navigate = useNavigate();
-  const handlogin=()=>{
-    navigate("login")
-  }
-  
-  const handCard=()=>{
-    navigate('cards')
-  }
   
 
   
@@ -43,28 +36,12 @@ function App() {
           
         </div>
         
-          <Button onClick={handlogin} variant="contained" color="success" >
-            Inscribirse
-             </Button>
-           <Button onClick={handCard} variant="contained" color="success" >
-            ver cards
-             </Button>
-          <Link to="login"> Inscribirse
-          </Link>
+          
        
       </div> 
-      <div>
-        
-          <Outlet/>
-        
+     
+<Footer></Footer>
       
-      </div>
-      <footer style={{bottom:0, position:"static", width:'100%'}} >
-        <Container  >
-          <Typography align="center" > hola soy el pie de pag  </Typography>
-          <div className="hola" > holaa </div>
-        </Container>
-      </footer>
     </div>
    
   );
@@ -72,8 +49,8 @@ function App() {
 
 export default App;
 
+//  
 //layout  que este anidado como hijop un componente para quie siempre tenga el appbar
 // drawer que salga las opciones 
 // pie de pag al layout foother 
 // agregarle mas pag 
-//  

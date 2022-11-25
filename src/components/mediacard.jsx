@@ -1,10 +1,16 @@
 import { Grid } from "@mui/material";
 import { MediaCard, MediaCard2, MediaCard3, MediaCard4, MediaCard5 } from "./card";
+import "../App.css"
+import { Layout } from "./Layout";
+import Footer from "./footer";
 
+export const Cardss = ()=>  
 
-export const Cardss = ()=>  <div  className="fundadores">
-<h3 className="strong"> DEVELOPERS </h3>
+<div  className="App">
+  <Layout> </Layout>
+<h3 className="strong" justifyItems={"center"}> DEVELOPERS </h3>
 <Grid container spacing={4} justifyContent={"center"}>
+  
   <Grid item  >
     <MediaCard />
   </Grid>
@@ -21,4 +27,5 @@ export const Cardss = ()=>  <div  className="fundadores">
     <MediaCard5 />
   </Grid>
 </Grid>
+<Footer></Footer>
 </div>

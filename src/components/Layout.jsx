@@ -13,6 +13,8 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Container,
+  Fab,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useState } from "react";
@@ -20,17 +22,30 @@ import "../App.css";
 import { useNavigate } from "react-router";
 import InboxIcon from "@mui/icons-material/Inbox";
 import DraftsIcon from "@mui/icons-material/Drafts";
-
+import AddIcon from '@mui/icons-material/Add';
+import Footer from "./footer";
 export const Layout = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const handlogin = () => {
     navigate("login");
+    
+  };
+  const handInicio = () => {
+    navigate("loginsd");
+    
+  };
+  const handloginUp = () => {
+    navigate("LoginUp");
+    
   };
 
   const handCard = () => {
     navigate("cards");
   };
+
+  
+  
   return (
     <>
       <CssBaseline />
@@ -68,12 +83,28 @@ export const Layout = () => {
           </div>
           <Divider />
           <List>
-            <ListItem disablePadding>
-              <ListItemButton onClick={handlogin}>
+          <ListItem disablePadding>
+              <ListItemButton onClick={handInicio} >
                 <ListItemIcon>
                   <InboxIcon />
                 </ListItemIcon>
-                <ListItemText primary="Inscribirse" />
+                <ListItemText primary="Inicio" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton onClick={handlogin} >
+                <ListItemIcon>
+                  <InboxIcon />
+                </ListItemIcon>
+                <ListItemText primary="Ingresar" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton onClick={handloginUp} >
+                <ListItemIcon>
+                  <InboxIcon />
+                </ListItemIcon>
+                <ListItemText primary="Crear Cuenta" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -84,9 +115,13 @@ export const Layout = () => {
                 <ListItemText primary="Cards" />
               </ListItemButton>
             </ListItem>
+            
           </List>
         </Paper>
       </Drawer>
+      <Fab color="primary" aria-label="add" style={{bottom:50,right:40, position:"fixed"  }}>
+              <AddIcon />
+      </Fab>
     </>
   );
 };

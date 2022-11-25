@@ -23,7 +23,7 @@ body{
     background-image: url('https://img.freepik.com/premium-vector/white-abstract-background-3d-paper-style_23-2148396396.jpg?w=2000');
     box-sizing: border-box;
     width: 100%;
-    
+    text-align: center;
     padding: 15px;
     justify-content: flex-start;
 }
@@ -74,8 +74,27 @@ body{
   text-align: center;
 
 }
-.hola{
-  width: 200px;
+.pie{
+  
+  height: 200px;
   color: #06181b;
-  background-color: #06181b;
+  background-color: #d0dddf;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #918787;
+}
+
+
+
+.container {
+  width: auto;
+  ;background-color: #e2d3d3;
+  padding: 0 15px;
+  position:static;
+  bottom: 0;
 }
