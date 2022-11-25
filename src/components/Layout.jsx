@@ -13,7 +13,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Container,
+  
   Fab,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -23,7 +23,6 @@ import { useNavigate } from "react-router";
 import InboxIcon from "@mui/icons-material/Inbox";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import AddIcon from '@mui/icons-material/Add';
-import Footer from "./footer";
 export const Layout = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
