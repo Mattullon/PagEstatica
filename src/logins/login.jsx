@@ -12,6 +12,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
+import { Layout } from '../components/Layout';
 
 const theme = createTheme();
 
@@ -31,6 +33,7 @@ export default function Login() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Layout> </Layout>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -85,6 +88,9 @@ export default function Login() {
                 <Button onClick={handlelogin} >
                   Crear cuenta
                 </Button>
+                <Link to="/LoginUp">
+                  Crear cuenta 
+                </Link>
               </Grid>
               <Grid item>
                 

@@ -1,8 +1,8 @@
 import "./App.css";
-import { Button} from "@mui/material";
-import {  Outlet, useNavigate } from "react-router-dom";
+import { Button, Container, Typography} from "@mui/material";
+import {  Link, Outlet, useNavigate } from "react-router-dom";
 import React from 'react';
-import { Appbarr } from "./components/Appbar";
+import { Layout } from "./components/Layout";
 function App() {
   
   
@@ -10,6 +10,7 @@ function App() {
   const handlogin=()=>{
     navigate("login")
   }
+  
   const handCard=()=>{
     navigate('cards')
   }
@@ -19,7 +20,7 @@ function App() {
   return (
     <div className="App">
       
-       <Appbarr/>
+      <Layout/>
              
      <div  className="inicio">
         <h3 className="big"> BIENVENIDOS ! </h3>
@@ -38,7 +39,7 @@ function App() {
           </p>{" "}
           <p className="parrafo">
            
-          </p>{" "}
+          </p>
           
         </div>
         
@@ -48,7 +49,8 @@ function App() {
            <Button onClick={handCard} variant="contained" color="success" >
             ver cards
              </Button>
-          
+          <Link to="login"> Inscribirse
+          </Link>
        
       </div> 
       <div>
@@ -57,9 +59,21 @@ function App() {
         
       
       </div>
+      <footer style={{bottom:0, position:"static", width:'100%'}} >
+        <Container  >
+          <Typography align="center" > hola soy el pie de pag  </Typography>
+          <div className="hola" > holaa </div>
+        </Container>
+      </footer>
     </div>
+   
   );
 }
 
 export default App;
 
+//layout  que este anidado como hijop un componente para quie siempre tenga el appbar
+// drawer que salga las opciones 
+// pie de pag al layout foother 
+// agregarle mas pag 
+//  
