@@ -5,7 +5,7 @@ import { Layout } from "./Layout";
 import Footer from "./footer";
 
 export const Cardss = ()=>  
-
+<>
 <div  className="App">
   <Layout> </Layout>
 <h3 className="strong" justifyItems={"center"}> DEVELOPERS </h3>
@@ -29,3 +29,4 @@ export const Cardss = ()=>
 </Grid>
 <Footer></Footer>
 </div>
+</>

@@ -14,6 +14,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import { Layout } from '../components/Layout';
+import Footer from '../components/footer';
 
 const theme = createTheme();
 
@@ -100,6 +101,7 @@ export default function Login() {
         </Box>
         
       </Container>
+      <Footer></Footer>
     </ThemeProvider>
   );
 }

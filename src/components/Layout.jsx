@@ -1,5 +1,5 @@
 import {
-  AppBar,
+  
   Button,
   IconButton,
   Toolbar,
@@ -19,7 +19,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useState } from "react";
 import "../App.css";
-import { useNavigate } from "react-router";
+import {  useNavigate } from "react-router";
 import InboxIcon from "@mui/icons-material/Inbox";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import AddIcon from '@mui/icons-material/Add';
@@ -27,28 +27,28 @@ export const Layout = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const handlogin = () => {
-    navigate("login");
+    navigate("/login")
     
   };
   const handInicio = () => {
-    navigate("loginsd");
+    navigate("/loginsd");
     
   };
   const handloginUp = () => {
-    navigate("LoginUp");
+    navigate("/LoginUp");
     
   };
 
   const handCard = () => {
-    navigate("cards");
+    navigate("/cards");
   };
-
   
+
   
   return (
     <>
       <CssBaseline />
-      <AppBar position="static">
+      
         <Toolbar>
           <IconButton
             size="large"
@@ -61,11 +61,12 @@ export const Layout = () => {
             <MenuIcon> </MenuIcon>
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            Inicio
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button> </Button>
+          <Button color="inherit" >Login</Button>
         </Toolbar>
-      </AppBar>
+     
       <Drawer anchor="left" open={open} onClose={() => setOpen(false)}>
         <Paper style={{ width: 240 }}>
           <div style={{ padding: 20, display: "flex", alignItems: "center" }}>
@@ -121,6 +122,7 @@ export const Layout = () => {
       <Fab color="primary" aria-label="add" style={{bottom:50,right:40, position:"fixed"  }}>
               <AddIcon />
       </Fab>
+      
     </>
   );
 };
