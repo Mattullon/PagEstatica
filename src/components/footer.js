@@ -2,7 +2,7 @@ import React from 'react'
 import "../App.css"
 const Footer = () => {
   return (
-    <div className="container" >
+    <div className="footer" >
   <footer className="py-3 my-4">
     <ul className="nav justify-content-center border-bottom pb-3 mb-3">
       <li >Inicio</li>

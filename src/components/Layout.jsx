@@ -1,5 +1,5 @@
 import {
-  AppBar,
+  
   Button,
   IconButton,
   Toolbar,
@@ -48,7 +48,7 @@ export const Layout = () => {
   return (
     <>
       <CssBaseline />
-      <AppBar position="static">
+      
         <Toolbar>
           <IconButton
             size="large"
@@ -65,7 +65,7 @@ export const Layout = () => {
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
-      </AppBar>
+      
       <Drawer anchor="left" open={open} onClose={() => setOpen(false)}>
         <Paper style={{ width: 240 }}>
           <div style={{ padding: 20, display: "flex", alignItems: "center" }}>
