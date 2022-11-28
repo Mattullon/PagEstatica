@@ -4,12 +4,13 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  padding-top: auto;
+  margin: 0;
 }
 
 
 .inicio{
   
-  background-image: url("https://img.freepik.com/premium-vector/white-abstract-background-3d-paper-style_23-2148396396.jpg?w=2000");
   box-sizing: border-box;
   width: 100%;
  
@@ -20,7 +21,6 @@
   }
 .fundadores{
     
-    background-image: url('https://img.freepik.com/premium-vector/white-abstract-background-3d-paper-style_23-2148396396.jpg?w=2000');
     box-sizing: border-box;
     width: 100%;
     text-align: center;
@@ -71,7 +71,8 @@
 }
 
 .footer {
-  margin-top: auto;
+  text-align: center;
+  padding: 1em 0;
 }
 
 
