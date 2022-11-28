@@ -1,3 +1,9 @@
+body{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+}
 .App {
   text-align: center;
   background-image: url("https://img.freepik.com/premium-vector/white-abstract-background-3d-paper-style_23-2148396396.jpg?w=2000");
@@ -8,6 +14,19 @@
   margin: 0;
 }
 
+.them {
+  text-align: center;
+  background-image: url("https://fondosmil.com/fondo/35152.jpg");
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  padding-top: auto;
+  margin: 0;
+}
+
+.login{
+  text-align: center;
+}
 
 .inicio{
   
@@ -73,7 +92,59 @@
 .footer {
   text-align: center;
   padding: 1em 0;
+  height: 120px;
+  margin-bottom: auto;
 }
 
-
-
+.fotos{
+  height: 600px;
+  padding: 3em;
+  display: flex;
+}
+.inicio1{
+  display: flex;
+}
+.inicio2{
+  text-align:left;
+  width: 50%;
+  padding: 3em;
+}
+.img { 
+  padding: 10px; 
+  margin: 10px; 
+  
+  float: right;
+  width: 40%;
+  
+ }
+.tiv{
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.caja{
+  width: 30%;
+  text-align: left;
+  flex-direction: column;
+}
+.caja1{
+  padding: 10px; margin: 10px; border: 2px solid black;
+}
+.caja2{
+  padding: 10px; margin: 10px; border: 2px solid black;
+}
+.caja3{
+  padding: 10px; margin: 10px; border: 2px solid black;
+}
+.strong{
+  flex-direction: column;
+  text-align: right;
+  width: 50%;
+  font-size: xx-large;
+}
+.stron{
+font-size: small;
+}
+.titulocard{
+  font-size: 30px;
+}

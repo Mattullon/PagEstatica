@@ -16,11 +16,8 @@ root.render(
       
 
          <Route path='*' element={<App />}></Route>
-         <Route path='cards' element={<Cardss />}></Route>
-         <Route path="cards/login" element={<Login />}></Route>
-         <Route path='cards/LoginUp' element={<LoginUp />}></Route>
+         <Route path='cards' element={<Cardss />}></Route>   
          <Route path="login" element={<Login />}></Route> 
-         <Route path="login/LoginUp" element={<LoginUp />}></Route>
          <Route path="LoginUp" element={<LoginUp />}></Route>
          
       

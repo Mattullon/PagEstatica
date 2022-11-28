@@ -11,6 +11,8 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { Layout } from '../components/Layout';
+import Footer from '../components/footer';
 
 
 
@@ -26,7 +28,8 @@ export default function LoginUp() {
   };
 
   return (
-   
+    <div  className="App">
+      <Layout/>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -113,6 +116,7 @@ export default function LoginUp() {
         </Box>
       
       </Container>
-    
+      <Footer/>
+    </div>
   );
 }

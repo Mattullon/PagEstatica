@@ -23,24 +23,25 @@ import { useNavigate } from "react-router";
 import InboxIcon from "@mui/icons-material/Inbox";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import AddIcon from '@mui/icons-material/Add';
+import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 export const Layout = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const handlogin = () => {
-    navigate("login");
+    navigate("/login");
     
   };
   const handInicio = () => {
-    navigate("loginsd");
+    navigate("/loginsd");
     
   };
   const handloginUp = () => {
-    navigate("LoginUp");
+    navigate("/LoginUp");
     
   };
 
   const handCard = () => {
-    navigate("cards");
+    navigate("/cards");
   };
 
   
@@ -61,9 +62,14 @@ export const Layout = () => {
             <MenuIcon> </MenuIcon>
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+          <IntegrationInstructionsIcon> </IntegrationInstructionsIcon>
+            
+            Dev.Tech
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button variant="text" color="inherit" style={{top:0,right:120  }}> Pricing</Button>
+          <Button variant="text" color="inherit" style={{top:0,right:80  }}> About</Button>
+          <Button variant="outlined" color="inherit" style={{top:0,right:20  }}> Login  </Button>
+          <Button variant="contained">Buy</Button>
         </Toolbar>
       
       <Drawer anchor="left" open={open} onClose={() => setOpen(false)}>
@@ -121,6 +127,7 @@ export const Layout = () => {
       <Fab color="primary" aria-label="add" style={{bottom:50,right:40, position:"fixed"  }}>
               <AddIcon />
       </Fab>
+      
     </>
   );
 };

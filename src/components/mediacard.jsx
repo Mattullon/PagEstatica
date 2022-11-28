@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import { MediaCard, MediaCard2, MediaCard3, MediaCard4, MediaCard5 } from "./card";
 import "../App.css"
 import { Layout } from "./Layout";
@@ -8,8 +8,8 @@ export const Cardss = ()=>
 
 <div  className="App">
   <Layout> </Layout>
-<h3 className="strong" justifyItems={"center"}> DEVELOPERS </h3>
-<Grid container spacing={4} justifyContent={"center"}>
+<h3 className="titulocard" justifyItems={"center"}> The world's best developers, on-demand. </h3>
+<Grid container spacing={4}  justifyContent={"center"} padding="40px">
   
   <Grid item  >
     <MediaCard />
@@ -25,6 +25,15 @@ export const Cardss = ()=>
   </Grid>
   <Grid item>
     <MediaCard5 />
+  </Grid>
+</Grid>
+<Grid container rowSpacing={8} fontSize={"30px"} flexDirection={"column"}>
+  <Grid item textAlign={"center"}>
+Ready to start building your dream team?
+
+  </Grid>
+  <Grid item >
+    <Button variant="contained"> Start to get contact </Button>
   </Grid>
 </Grid>
 <Footer></Footer>
