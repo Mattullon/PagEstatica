@@ -17,7 +17,7 @@ function App() {
   return (
     <div className={theme}>
       <Layout/>
-      <Button onClick={setMode(false)}> Theme </Button>
+      <Button onClick={setMode(!mode)}> Theme </Button>
              
      <div  className="inicio">
         <h3 className="big"> BIENVENIDOS ! </h3>
