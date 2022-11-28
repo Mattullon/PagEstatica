@@ -4,21 +4,17 @@ import { Layout } from "./components/Layout";
 import Footer from "./components/footer";
 import {Button} from "@mui/material"
 function App() {
-  const [mode,setMode]=useState(true)
-  let theme = mode ? "App" : "App-theme" 
-    
-
+  const dark = "App-theme";
+  const light = "App";
+  const [mode,setMode]=useState(true);
   
   
-  
-  
-
   
   return (
-    <div className={theme}>
+    <div className={mode ? light : dark }>
       <Layout/>
-      <Button onClick={setMode(!mode)}> Theme </Button>
-             
+      
+             <Button onClick={()=>setMode(!mode)}> Darkmode </Button>
      <div  className="inicio">
         <h3 className="big"> BIENVENIDOS ! </h3>
         <h4 className="big">
