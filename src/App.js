@@ -1,14 +1,14 @@
 import "./App.css";
 import React from "react";
 import { Layout } from "./components/Layout";
-import Footer from "./components/footer";
 import { Chip, Divider, Stack, Button } from "@mui/material";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import HtmlIcon from "@mui/icons-material/Html";
 function App() {
   return (
+    <Layout>
     <div className="App">
-      <Layout />
+      
 
       <div className="inicio">
         <h3 className="big"> BIENVENIDOS ! </h3>
@@ -86,8 +86,9 @@ function App() {
           <Chip label="Chip Outlined" variant="outlined" />
         </Stack>
       </div>
-      <Footer></Footer>
+      
     </div>
+    </Layout>
   );
 }
 

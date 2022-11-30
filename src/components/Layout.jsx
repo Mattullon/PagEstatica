@@ -3,7 +3,7 @@ import {
   Button,
   IconButton,
   Toolbar,
-  Typography,
+  
   Drawer,
   CssBaseline,
   Paper,
@@ -24,7 +24,12 @@ import InboxIcon from "@mui/icons-material/Inbox";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import AddIcon from '@mui/icons-material/Add';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
-export const Layout = () => {
+import Footer from "./footer"
+
+
+export const Layout = ({children}) => {
+  
+  
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const handlogin = () => {
@@ -50,7 +55,7 @@ export const Layout = () => {
     <>
       <CssBaseline />
       
-        <Toolbar>
+        <Toolbar className="toolbar">
           <IconButton
             size="large"
             edge="start"
@@ -61,11 +66,11 @@ export const Layout = () => {
           >
             <MenuIcon> </MenuIcon>
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Button variant="outlined" onClick={handInicio} >
           <IntegrationInstructionsIcon> </IntegrationInstructionsIcon>
             
             Dev.Tech
-          </Typography>
+          </Button>
           <Button variant="text" color="inherit" style={{top:0,right:120  }}> Pricing</Button>
           <Button variant="text" color="inherit" style={{top:0,right:80  }}> About</Button>
           <Button variant="outlined" color="inherit" style={{top:0,right:20  }}> Login  </Button>
@@ -127,7 +132,8 @@ export const Layout = () => {
       <Fab color="primary" aria-label="add" style={{bottom:50,right:40, position:"fixed"  }}>
               <AddIcon />
       </Fab>
-      
+      {children}
+      <Footer/>
     </>
   );
 };

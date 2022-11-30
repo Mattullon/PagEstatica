@@ -13,7 +13,11 @@ body{
   padding-top: auto;
   margin: 0;
 }
-
+.toolbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .them {
   text-align: center;
   background-image: url("https://fondosmil.com/fondo/35152.jpg");
