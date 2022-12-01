@@ -1,9 +1,6 @@
 body{
-  margin: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-  padding: 0;
+ background-color: #06181b;
+  
   
   
 }
@@ -102,6 +99,7 @@ body{
   
   
 }
+
 
 
 
