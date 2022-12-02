@@ -23,7 +23,8 @@ import {  useNavigate } from "react-router";
 import InboxIcon from "@mui/icons-material/Inbox";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import AddIcon from '@mui/icons-material/Add';
-export const Layout = () => {
+import Footer from "./footer";
+export const Layout = ({children}) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const handlogin = () => {
@@ -122,7 +123,8 @@ export const Layout = () => {
       <Fab color="primary" aria-label="add" style={{bottom:50,right:40, position:"fixed"  }}>
               <AddIcon />
       </Fab>
-      
+      {children}
+      <Footer></Footer>
     </>
   );
 };

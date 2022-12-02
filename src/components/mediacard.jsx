@@ -7,7 +7,7 @@ import Footer from "./footer";
 export const Cardss = ()=>  
 <>
 <div  className="App">
-  <Layout> </Layout>
+  <Layout> 
 <h3 className="strong" justifyItems={"center"}> DEVELOPERS </h3>
 <Grid container spacing={4} justifyContent={"center"}>
   
@@ -27,6 +27,6 @@ export const Cardss = ()=>
     <MediaCard5 />
   </Grid>
 </Grid>
-<Footer></Footer>
+</Layout>
 </div>
 </>

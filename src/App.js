@@ -1,7 +1,6 @@
 import "./App.css";
 import React, { useState} from 'react';
 import { Layout } from "./components/Layout";
-import Footer from "./components/footer";
 import {Button} from "@mui/material"
 function App() {
   const dark = "App-theme";
@@ -12,7 +11,7 @@ function App() {
   
   return (
     <div className={mode ? light : dark }>
-      <Layout/>
+      <Layout>
       
              <Button onClick={()=>setMode(!mode)}> Darkmode </Button>
      <div  className="inicio">
@@ -62,9 +61,9 @@ function App() {
       </div> 
      
 
-      <Footer></Footer>
+      
+    </Layout>
     </div>
-   
   );
 }
 
