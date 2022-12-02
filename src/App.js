@@ -6,11 +6,11 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import HtmlIcon from "@mui/icons-material/Html";
 function App() {
   return (
-    <Layout>
     <div className="App">
+    <Layout>
       
-
       <div className="inicio">
+
         <h3 className="big"> BIENVENIDOS ! </h3>
         <h4 className="media">
           Este seria el Primer Torneo Para Desarrolladores de Apps En Todo el
@@ -87,8 +87,8 @@ function App() {
         </Stack>
       </div>
       
-    </div>
     </Layout>
+    </div>
   );
 }
 
