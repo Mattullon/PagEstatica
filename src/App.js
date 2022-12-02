@@ -2,33 +2,42 @@ import "./App.css";
 import React from "react";
 import { Button, Grid } from "@mui/material";
 function App() {
- 
+  
 
   return (
-<Grid container
-  spacing={4}
+
+  <Grid container spacing={8}
   direction="column"
-  alignItems="center"
   justifyContent="center"
-  style={{ minHeight: '100vh' }}
-
-
->
+  alignContent="center"
+  style={{minHeight:'100vh'}}
+  > 
+  <Grid item > 
+    <Button  color='inherit' className="caja" href="https://www.instagram.com/"> instagram </Button>
   
-  <Grid item className="caja1" >
-    instagram
-  </Grid>
-  
-  <Grid item className="caja2">
-    
-    facebbok
-  </Grid>
-  <Button > hola</Button>
-  <Grid item className="caja3">
-    telegram
   </Grid>
 
-</Grid>
+  <Grid item>
+
+    <Button  color='inherit' className="caja" href="https://www.instagram.com/"> facebook </Button>
+
+  </Grid>
+  
+  <Grid item>
+    <Button  color='inherit' className="caja" href="https://www.instagram.com/"> whasaap </Button>
+
+  </Grid>
+
+  
+  
+
+    </Grid>
+  
+  
+
+  
+
+
   );
 }
 

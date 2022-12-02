@@ -1,33 +1,35 @@
-body{
- background-color: #a4c1c6;
-  
-  
-  
-}
-.App {
-  text-align: center;
-  margin-top: auto;
-  background-image: url("https://img.freepik.com/premium-vector/white-abstract-background-3d-paper-style_23-2148396396.jpg?w=2000");
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}
-.caja1{
-  padding: 10px; 
-  margin: 10px; 
-  border: 2px solid rgb(12, 12, 12);
-  
+*{
+  margin: 0px;
+  padding: 0px;
 
 }
-.caja2{
-  padding: 10px; 
-  margin: 10px; 
-  border: 2px solid black;
+:root {
+--color-fondo: #0000;
+
+}
+
+body{
+ background-color: var(--color-fondo);
+ height: 1000px;
+  
+  
   
 }
-.caja3{
-  padding: 10px; margin: 10px; border: 2px solid black;
+
+  
+  
+  
+  
+
+
+.caja{
+  background: rgb(63,94,251);
+  background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,70,1) 52%);
+  
+  
+  
 }
+
 
 
 
