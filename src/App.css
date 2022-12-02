@@ -1,5 +1,5 @@
 body{
- background-color: #06181b;
+ background-color: #a4c1c6;
   
   
   
@@ -12,93 +12,23 @@ body{
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
-.App-theme{
-  text-align: center;
-  color: #ecf4f6;
-  margin-top: auto;
-  background-image: url("https://static.vecteezy.com/system/resources/previews/003/782/532/non_2x/black-abstract-background-composed-of-squares-modern-technology-dark-design-geometric-illustration-metal-mesh-texture-vector.jpg");
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}
-
-
-.inicio{
+.caja1{
+  padding: 10px; 
+  margin: 10px; 
+  border: 2px solid rgb(12, 12, 12);
   
-  box-sizing: border-box;
-  width: 100%;
- 
-  
-  
-  
-  
-  }
-.fundadores{
-    
-    box-sizing: border-box;
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    justify-content: flex-start;
-}
-
-  
-.link{
-  text-decoration: none;
-  display: inline;
-  padding: 20px 20px;
-  font-weight: 700;
-  font-size: large;
-  cursor: pointer;
-  flex-direction: column;
-}
-
-
-.f{
- 
-  color: #a5b3b6;
-}
-.big{
-  font-size: 2.2em;
-  
-}
-.Tparrafo{
-  text-align: left;
-  font-size: 1.2em;
-  padding: 50px;
-}
-
-
-
-
-
-
-.tbar{ 
-  justify-content:space-between; 
-}
-
-
-.d{
-  background-color: #06181b;
-}
-.texto_login{
-  text-align: center;
 
 }
-.pie{
-  
-  height: 200px;
-  color: #06181b;
-  background-color: #d0dddf;
-}
-.footer {
-  
-  padding: 1em 0;
-  text-align: center;
-  
-  
+.caja2{
+  padding: 10px; 
+  margin: 10px; 
+  border: 2px solid black;
   
 }
+.caja3{
+  padding: 10px; margin: 10px; border: 2px solid black;
+}
+
 
 
 
