@@ -3,7 +3,7 @@ import Link from '@mui/material/Link';
 import "../App.css"
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import { Grid } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 const Footer = () => {
   return (
     <div className="footer" >
@@ -17,9 +17,9 @@ const Footer = () => {
       </Grid>
       <Grid item>
       <TwitterIcon></TwitterIcon>
-    <Link color="inherit" href="https://twitter.com/">
+    <Button variant='text' color='inherit' href="https://twitter.com/">
         Twitter 
-      </Link>{' '}
+      </Button>{' '}
       </Grid>    
             
     </Grid>
