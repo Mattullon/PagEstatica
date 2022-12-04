@@ -25,7 +25,9 @@ const Draver = () => {
     navigate("/cards");
   };
   return (
-    <Drawer anchor="left" open={open} onClose={() => setOpen(false)}>
+    <>
+    <Drawer  open={open} onClose={() => setOpen(false)}>
+            
         <Paper style={{ width: 240 }}>
           <div style={{ padding: 20, display: "flex", alignItems: "center" }}>
             <IconButton
@@ -78,6 +80,10 @@ const Draver = () => {
           </List>
         </Paper>
       </Drawer>
+    <IconButton sx={{marginLeft: 'auto'}} onClick={()=>setOpen(true)}>
+      <MenuIcon className='icon' />
+    </IconButton>
+    </>
   )
 }
 

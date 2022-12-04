@@ -7,9 +7,11 @@ export const Cardss = ()=>
 
 <div  className="App">
   <Layout> 
-<h3 className="titulocard" justifyItems={"center"}> The world's best developers, on-demand. </h3>
 <Grid container spacing={4}  justifyContent={"center"} padding="40px">
-  
+<Grid item  >
+<h3 fullwith className="titulocard" justifyItems={"center"}> The world's best developers, on-demand. </h3>
+
+  </Grid>
   <Grid item  >
     <MediaCard />
   </Grid>

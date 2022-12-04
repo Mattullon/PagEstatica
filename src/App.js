@@ -6,8 +6,8 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import HtmlIcon from "@mui/icons-material/Html";
 function App() {
   return (
-    <div className="App">
     <Layout>
+    <div className="App">
       
       <div className="inicio">
 
@@ -87,8 +87,8 @@ function App() {
         </Stack>
       </div>
       
-    </Layout>
     </div>
+    </Layout>
   );
 }
 

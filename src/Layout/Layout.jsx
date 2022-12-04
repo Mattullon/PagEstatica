@@ -1,4 +1,4 @@
-import { Toolbar, CssBaseline, Fab, Grid, Typography, Tabs, Tab, Button, AppBar } from "@mui/material";
+import { Toolbar, CssBaseline, Fab, Grid, Typography, Tabs, Tab, Button, AppBar, Box } from "@mui/material";
 import React, { useState } from "react";
 import "../App.css";
 import AddIcon from "@mui/icons-material/Add";
@@ -6,9 +6,14 @@ import Footer from "../components/footer";
 import Draver from "./Draver";
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 import { useNavigate } from "react-router";
-import { Box } from "@mui/system";
+import {useTheme, useMediaQuery} from "@mui/material"
 
 export const Layout = ({ children }) => {
+
+  const Theme=useTheme();
+  console.log(Theme)
+  const isMatch=useMediaQuery(Theme.breakpoints.down('sm'))
+  console.log(isMatch)
   const navigate = useNavigate();
   const handlogin = () => {
     navigate("/login");
@@ -31,7 +36,13 @@ export const Layout = ({ children }) => {
     <>
       
       <AppBar sx={{backgroundImage:'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(79,153,192,1) 97%, rgba(0,212,255,1) 100%);'}}>
-        <Toolbar>
+        <Toolbar>{ isMatch ? 
+        <> 
+         <Typography>
+              <DeveloperModeIcon />
+              </Typography>
+        <Draver /> 
+        </> :
           <Grid  sx={{placeItems:'center'}} container>
             <Grid item xs={2}>
               <Typography>
@@ -47,20 +58,20 @@ export const Layout = ({ children }) => {
 
               </Tabs>
             </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={2}/>
             <Grid item xs={3}>
               <Box display="flex">
-                <Button sx={{ marginInlineEnd:'auto',background:'rgba(2,0,36,1)'}} variant="contained"> Login </Button>
-                <Button sx={{marginRight:1, background:'rgba(2,0,36,1)'}} variant="contained"> Signup </Button>
+                <Button sx={{ marginLeft:'auto',background:'rgba(2,0,36,1)'}} variant="contained"> Login </Button>
+                <Button sx={{marginLeft:1, background:'rgba(2,0,36,1)'}} variant="contained"> Signup </Button>
 
               </Box>
 
             </Grid>
+          
           </Grid>
-          </Grid>
+          }
         </Toolbar>
       </AppBar>
-      <Draver/>
 
       <Fab
         color="primary"

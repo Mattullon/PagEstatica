@@ -31,8 +31,8 @@ export default function Login() {
   }
 
   return (
-    <div  className="App">
       <Layout> 
+    <div  className="App">
     <ThemeProvider theme={theme}>
       <div className='login'> 
       <Container component="main" maxWidth="xs">
@@ -102,7 +102,7 @@ export default function Login() {
       </div>
       
     </ThemeProvider>
-      </Layout>
     </div>
+      </Layout>
   );
 }
