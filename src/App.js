@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { Layout } from "./components/Layout";
+import { Layout } from "./Layout/Layout";
 import { Chip, Divider, Stack, Button } from "@mui/material";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import HtmlIcon from "@mui/icons-material/Html";

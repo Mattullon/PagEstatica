@@ -1,35 +1,11 @@
-import {
-  
-  Button,
-  IconButton,
-  Toolbar,
-  
-  Drawer,
-  CssBaseline,
-  Paper,
-  Divider,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  
-  Fab,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import React, { useState } from "react";
-import "../App.css";
-import { useNavigate } from "react-router";
-import InboxIcon from "@mui/icons-material/Inbox";
+import { Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Paper } from '@mui/material'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router';
 import DraftsIcon from "@mui/icons-material/Drafts";
-import AddIcon from '@mui/icons-material/Add';
-import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
-import Footer from "./footer"
+import MenuIcon from "@mui/icons-material/Menu";
+import InboxIcon from "@mui/icons-material/Inbox";
 
-
-export const Layout = ({children}) => {
-  
-  
+const Draver = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const handlogin = () => {
@@ -48,36 +24,8 @@ export const Layout = ({children}) => {
   const handCard = () => {
     navigate("/cards");
   };
-
-  
-  
   return (
-    <>
-      <CssBaseline />
-      
-        <Toolbar className="toolbar">
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-            onClick={() => setOpen(true)}
-          >
-            <MenuIcon> </MenuIcon>
-          </IconButton>
-          <Button variant="outlined" onClick={handInicio} >
-          <IntegrationInstructionsIcon> </IntegrationInstructionsIcon>
-            
-            Dev.Tech
-          </Button>
-          <Button variant="text" color="inherit" style={{top:0,right:120  }}> Pricing</Button>
-          <Button variant="text" color="inherit" style={{top:0,right:80  }}> About</Button>
-          <Button variant="outlined" color="inherit" style={{top:0,right:20  }}> Login  </Button>
-          <Button variant="contained">Buy</Button>
-        </Toolbar>
-      
-      <Drawer anchor="left" open={open} onClose={() => setOpen(false)}>
+    <Drawer anchor="left" open={open} onClose={() => setOpen(false)}>
         <Paper style={{ width: 240 }}>
           <div style={{ padding: 20, display: "flex", alignItems: "center" }}>
             <IconButton
@@ -95,7 +43,8 @@ export const Layout = ({children}) => {
           <List>
           <ListItem disablePadding>
               <ListItemButton onClick={handInicio} >
-                <ListItemIcon>
+                <ListItemIcon
+                >
                   <InboxIcon />
                 </ListItemIcon>
                 <ListItemText primary="Inicio" />
@@ -129,11 +78,7 @@ export const Layout = ({children}) => {
           </List>
         </Paper>
       </Drawer>
-      <Fab color="primary" aria-label="add" style={{bottom:50,right:40, position:"fixed"  }}>
-              <AddIcon />
-      </Fab>
-      {children}
-      <Footer/>
-    </>
-  );
-};
+  )
+}
+
+export default Draver
