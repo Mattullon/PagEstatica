@@ -1,156 +1,44 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import { useNavigate } from "react-router";
-import InboxIcon from "@mui/icons-material/Inbox";
-import DraftsIcon from "@mui/icons-material/Drafts";
-import {ListItemIcon} from "@mui/material"
-const drawerWidth = 240;
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import { useNavigate } from 'react-router';
 
-function DrawerAppBar(props) {
-  const navigate = useNavigate();
-  const handlogin = () => {
-    navigate("/login")
-    
-  };
-  const handInicio = () => {
-    navigate("/loginsd");
-    
-  };
-  const handloginUp = () => {
-    navigate("/LoginUp");
-    
-  };
-
-  const handCard = () => {
-    navigate("/cards");
-  };
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
-      <List>
-      
-          <ListItem disablePadding>
-              <ListItemButton onClick={handInicio} >
-                <ListItemIcon>
-                  <InboxIcon />
-                </ListItemIcon>
-                <ListItemText primary="Inicio" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton onClick={handlogin} >
-                <ListItemIcon>
-                  <InboxIcon />
-                </ListItemIcon>
-                <ListItemText primary="Ingresar" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton onClick={handloginUp} >
-                <ListItemIcon>
-                  <InboxIcon />
-                </ListItemIcon>
-                <ListItemText primary="Crear Cuenta" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton onClick={handCard}>
-                <ListItemIcon>
-                  <DraftsIcon />
-                </ListItemIcon>
-                <ListItemText primary="Cards" />
-              </ListItemButton>
-            </ListItem>
-            
-          </List>
-      
-    </Box>
-  );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
-
+function LinkTab(props) {
   return (
-    <Box sx={{ display: "flex" }}>
-      <AppBar component="nav">
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            MUI
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <Button variant="contained"> hola </Button>
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <Box component="nav">
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth
-            }
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-      <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-      </Box>
-    </Box>
+    <Tab
+      component="a"
+      onClick={(event) => {
+        event.preventDefault();
+      }}
+      {...props}
+    />
   );
 }
 
-DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func
-};
+export default function NavTabs() {
+  const [value, setValue] = React.useState(0);
+  const navigate=useNavigate();
+  const handlelogin = ()=>{
+    navigate("/login")
+  }
+  const handSin = ()=>{
+    navigate("/LoginUp")
+  }
+  const handini = ()=>{
+    navigate("/sd")
+  }
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
-export default DrawerAppBar;
+  return (
+    <Box sx={{ width: '100%' }}>
+      <Tabs value={value} onChange={handleChange} aria-label="nav tabs example">
+        <LinkTab label="Inicio"  onClick={handini} />
+        <LinkTab label="Login"  onClick={handlelogin}/>
+        <LinkTab label="singUp"  onClick={handSin} />
+      </Tabs>
+    </Box>
+  );
+}

@@ -11,6 +11,7 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import NavTabs from '../components/Layout copy';
 
 
 
@@ -28,6 +29,7 @@ export default function LoginUp() {
   return (
    
       <Container component="main" maxWidth="xs">
+        <NavTabs></NavTabs>
         <CssBaseline />
         <Box
           sx={{

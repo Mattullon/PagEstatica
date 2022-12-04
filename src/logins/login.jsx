@@ -13,8 +13,8 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
-import { Layout } from '../components/Layout';
 import Footer from '../components/footer';
+import NavTabs from '../components/Layout copy';
 
 const theme = createTheme();
 
@@ -34,7 +34,7 @@ export default function Login() {
 
   return (
     <ThemeProvider theme={theme}>
-      
+      <NavTabs></NavTabs>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box

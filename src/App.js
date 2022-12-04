@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState} from 'react';
 import {Button} from "@mui/material"
-import DrawerAppBar from "./components/Layout copy";
+import NavTabs from "./components/Layout copy";
 function App() {
   const dark = "App-theme";
   const light = "App";
@@ -11,7 +11,7 @@ function App() {
   
   return (
     <div className={mode ? light : dark }>
-      <DrawerAppBar></DrawerAppBar>
+      <NavTabs></NavTabs>
       
              <Button onClick={()=>setMode(!mode)}> Darkmode </Button>
      <div  className="inicio">
