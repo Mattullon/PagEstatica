@@ -26,7 +26,7 @@ const Draver = () => {
   };
   return (
     <>
-    <Drawer  open={open} onClose={() => setOpen(false)}>
+    <Drawer anchor='right' open={open} onClose={() => setOpen(false)}>
             
         <Paper style={{ width: 240 }}>
           <div style={{ padding: 20, display: "flex", alignItems: "center" }}>
