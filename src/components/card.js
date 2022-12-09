@@ -1,33 +1,30 @@
 import React from 'react'
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
-import imag from '../image/imag.jpeg'
-import imag2 from '../image/imag2.jpeg'
-import imag3 from '../image/imag3.jpeg'
-import imag4 from '../image/imag4.jpeg'
-import imag5 from '../image/imag5.jpeg'
+
+
 
 
 
 
 export function MediaCard() {
     return (
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 200 }}>
         <CardMedia
           component="img"
           height="140"
-          image={imag}
+          image={'https://media.istockphoto.com/id/968315374/es/vector/concepto-de-icono-de-c%C3%ADrculo-de-bomba-de-combustible.jpg?s=612x612&w=0&k=20&c=aMSuI_Oo6-pVCz5wOVHQMqIr1iiMtiNobmibi0PeZZ8='}
           alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-          Full-stack Engineer
+          Default
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Jose Sosa
+            Ofertas
           </Typography>
         </CardContent>
         <CardActions>
-          <Button fullWidth variant="contained">Contact</Button>
+          <Button fullWidth variant="contained">Ver Precios</Button>
           
         </CardActions>
       </Card>
@@ -37,22 +34,22 @@ export function MediaCard() {
   }
   export function MediaCard2() {
     return (
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 200 }}>
         <CardMedia
           component="img"
           height="140"
-          image={imag2}
+          image={'https://e7.pngegg.com/pngimages/511/57/png-clipart-royal-dutch-shell-logo-decal-design-text-logo.png'}
           alt="green iguana" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-          Mobile Engineer
+          Shell
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Eugenio Gamarra
+            Oferta del dia
           </Typography>
         </CardContent>
         <CardActions>
-          <Button fullWidth variant="contained">Contact</Button>
+          <Button fullWidth variant="contained">Ver Precios</Button>
   
         </CardActions>
       </Card>
@@ -62,22 +59,22 @@ export function MediaCard() {
   }
   export function MediaCard3() {
     return (
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 200 }}>
         <CardMedia
           component="img"
           height="140"
-          image={imag3}
+          image={'https://companieslogo.com/img/orig/PBR-435ea1d8.png?t=1647968022'}
           alt="green iguana" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-          Mobile Engineer
+          Petrobras
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Nicolas Benitez
+            Oferta del dia
           </Typography>
         </CardContent>
         <CardActions>
-          <Button fullWidth variant="contained">Contact</Button>
+          <Button fullWidth variant="contained">Ver Precios</Button>
   
         </CardActions>
       </Card>
@@ -87,22 +84,22 @@ export function MediaCard() {
   }
   export function MediaCard4() {
     return (
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 200 }}>
         <CardMedia
           component="img"
           height="140"
-          image={imag4}
+          image={'https://pbs.twimg.com/profile_images/1598311484920061953/tYHNgJiM_400x400.jpg'}
           alt="green iguana" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-          Mobile Engineer
+          PetroPar
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          Merary Diniz
+          Ofertas
           </Typography>
         </CardContent>
         <CardActions>
-          <Button fullWidth variant="contained">Contact</Button>
+          <Button fullWidth variant="contained">Ver Precios</Button>
   
         </CardActions>
       </Card>
@@ -112,24 +109,24 @@ export function MediaCard() {
   }
   export function MediaCard5() {
     return (
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 200 }}>
         <CardMedia
           component="img"
           height="140"
-          image={imag5}
+          image={'https://media.istockphoto.com/id/968315374/es/vector/concepto-de-icono-de-c%C3%ADrculo-de-bomba-de-combustible.jpg?s=612x612&w=0&k=20&c=aMSuI_Oo6-pVCz5wOVHQMqIr1iiMtiNobmibi0PeZZ8='}
           alt="green iguana" 
           />
           
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-          Mobile Engineer
+          Petrobas
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          Jeffrey Dahmer
+          Ofertas
           </Typography>
         </CardContent>
         <CardActions>
-          <Button fullWidth variant="contained">Contact</Button>
+          <Button fullWidth variant="contained">Ver Precios</Button>
   
         </CardActions>
       </Card>

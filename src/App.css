@@ -151,6 +151,25 @@ body{
 .stron{
 font-size: small;
 }
-.titulocard{
-  font-size: 30px;
+
+.Navbar{
+  position:fixed;
+  bottom: 0;
+}
+.tabs{
+  justify-content: space-around;
+}
+.hola{
+  justify-content: space-around;
+}
+.titulo{
+  margin: 20;
+  padding-top: 50px;
+}
+.divs{
+  margin-top:45px;
+  color: rgb(33, 33, 30);
+  background-color: rgb(155, 154, 153);
+  width:100%;
+
 }

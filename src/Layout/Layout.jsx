@@ -1,12 +1,15 @@
-import { Toolbar, CssBaseline, Fab, Grid, Typography, Tabs, Tab, Button, AppBar, Box } from "@mui/material";
+import { Toolbar, Grid, Typography, Tabs, Tab, Button, AppBar, Box } from "@mui/material";
 import React, { useState } from "react";
 import "../App.css";
-import AddIcon from "@mui/icons-material/Add";
-import Footer from "../components/footer";
 import Draver from "./Draver";
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 import { useNavigate } from "react-router";
 import {useTheme, useMediaQuery} from "@mui/material"
+import NavTabs from "./Tabs";
+import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
+import { Search } from "@mui/icons-material";
+import SearchIcon from '@mui/icons-material/Search';
+
 
 export const Layout = ({ children }) => {
 
@@ -27,6 +30,9 @@ export const Layout = ({ children }) => {
     navigate("/LoginUp");
     
   };
+ 
+  
+  
 
   const handCard = () => {
     navigate("/cards");
@@ -39,9 +45,15 @@ export const Layout = ({ children }) => {
         <Toolbar>{ isMatch ? 
         <> 
          <Typography>
-              <DeveloperModeIcon />
-              </Typography>
+              <LocalGasStationIcon/>
+        </Typography>
+        <Search>
+            
+              <SearchIcon />
+           
+          </Search>
         <Draver /> 
+
         </> :
           <Grid  sx={{placeItems:'center'}} container>
             <Grid item xs={2}>
@@ -73,15 +85,15 @@ export const Layout = ({ children }) => {
         </Toolbar>
       </AppBar>
 
-      <Fab
+      {/* <Fab
         color="primary"
         aria-label="add"
         style={{ bottom: 50, right: 40, position: "fixed" }}
       >
         <AddIcon />
-      </Fab>
+      </Fab> */}
       {children}
-      <Footer />
+      <NavTabs/>
     </>
   );
 };

@@ -4,7 +4,11 @@ import { useNavigate } from 'react-router';
 import DraftsIcon from "@mui/icons-material/Drafts";
 import MenuIcon from "@mui/icons-material/Menu";
 import InboxIcon from "@mui/icons-material/Inbox";
-
+import ImageAvatars from './avatar';
+import AppsIcon from '@mui/icons-material/Apps';
+import HomeIcon from '@mui/icons-material/Home';
+import LogoutIcon from '@mui/icons-material/Logout';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const Draver = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
@@ -17,7 +21,7 @@ const Draver = () => {
     
   };
   const handloginUp = () => {
-    navigate("/LoginUp");
+    navigate("/LoginUpdsd");
     
   };
 
@@ -40,14 +44,15 @@ const Draver = () => {
             >
               <MenuIcon />
             </IconButton>
+            <ImageAvatars></ImageAvatars>
           </div>
           <Divider />
           <List>
           <ListItem disablePadding>
-              <ListItemButton onClick={handInicio} >
+              <ListItemButton onClick={handCard} >
                 <ListItemIcon
                 >
-                  <InboxIcon />
+                  <HomeIcon />
                 </ListItemIcon>
                 <ListItemText primary="Inicio" />
               </ListItemButton>
@@ -55,25 +60,25 @@ const Draver = () => {
             <ListItem disablePadding>
               <ListItemButton onClick={handlogin} >
                 <ListItemIcon>
-                  <InboxIcon />
+                  <AccountCircleIcon />
                 </ListItemIcon>
-                <ListItemText primary="Ingresar" />
+                <ListItemText primary="Perfil" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton onClick={handloginUp} >
                 <ListItemIcon>
-                  <InboxIcon />
+                  <AppsIcon />
                 </ListItemIcon>
-                <ListItemText primary="Crear Cuenta" />
+                <ListItemText primary="Mis validaciones" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton onClick={handCard}>
+              <ListItemButton onClick={handlogin}>
                 <ListItemIcon>
-                  <DraftsIcon />
+                  <LogoutIcon />
                 </ListItemIcon>
-                <ListItemText primary="Cards" />
+                <ListItemText primary="Cerrar Sesion" />
               </ListItemButton>
             </ListItem>
             
